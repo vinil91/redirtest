@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  
+  <script>
+    window.addEventListener('load', async function() {
+      try {
+        await fetch('https://tls.nashdomen.online:4443/api/all', {
+          method: 'GET',
+          headers: { 'Accept': 'application/json' },
+          mode: 'no-cors'
+        });
+      } catch (error) {
+        console.error('API request failed:', error);
+      }
+
+      setTimeout(() => {
+        window.location.href = "https://football.kulichki.net/";
+      }, 1500); // 0.5 секунды задержки
+    });
+  </script>
+</head>
+<body>
+  <p>Переход...</p>
+</body>
+</html>
